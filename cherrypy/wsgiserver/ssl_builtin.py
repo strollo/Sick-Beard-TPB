@@ -16,6 +16,8 @@ except ImportError:
 
 from cherrypy import wsgiserver
 
+ssl.PROTOCOL_SSLv23 = ssl.PROTOCOL_TLSv1
+
 
 class BuiltinSSLAdapter(wsgiserver.SSLAdapter):
     """A wrapper for integrating Python's builtin ssl module with CherryPy."""
